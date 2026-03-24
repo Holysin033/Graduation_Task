@@ -1,0 +1,37 @@
+{
+    "name": "music-server",
+    "version": "1.0.0",
+    "description": "音乐服务中间层",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "keywords": [
+        "网易云音乐",
+        "网易云",
+        "音乐",
+        "网易云音乐nodejs"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "author": "binaryify",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "axios": "^0.21.1",
+        "cors": "^2.8.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
