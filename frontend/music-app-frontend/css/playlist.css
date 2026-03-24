@@ -1,0 +1,186 @@
+.container {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+.container .playlist-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40rpx;
+  background: #fff;
+}
+.container .playlist-header .cover {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.container .playlist-header .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+}
+.container .playlist-header .info .name-scroll {
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.container .playlist-header .info .name-scroll .name {
+  display: inline-block;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  padding-right: 50rpx;
+  white-space: nowrap;
+}
+.container .playlist-header .info .creator {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .playlist-header .info .description {
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.container .playlist-header .info .more {
+  display: block;
+  font-size: 24rpx;
+  color: #007AFF;
+  margin-top: 12rpx;
+}
+.container .song-list {
+  margin-top: 20rpx;
+  background: #fff;
+}
+.container .song-list .song-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.container .song-list .song-item .index {
+  width: 60rpx;
+  font-size: 28rpx;
+  color: #999;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.container .song-list .song-item .song-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 20rpx;
+  min-width: 0;
+}
+.container .song-list .song-item .song-info .name {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 12rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .song-list .song-item .song-info .artist {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .song-list .song-item .duration {
+  font-size: 24rpx;
+  color: #999;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.description-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.description-popup .popup-content {
+  width: 85%;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.description-popup .popup-content .popup-header {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.description-popup .popup-content .popup-header .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+.description-popup .popup-content .popup-header .close {
+  font-size: 40rpx;
+  color: #999;
+  padding: 10rpx;
+}
+.description-popup .popup-content .popup-body {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: auto;
+  padding: 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.description-popup .popup-content .popup-body .full-description {
+  font-size: 25rpx;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}/*# sourceMappingURL=playlist.css.map */

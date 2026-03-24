@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/player/player",
+    "pages/playlist/playlist",
+    "pages/user/user",
+    "pages/user/favorites",
+    "pages/user/history",
+    "pages/user/playlists",
+    "pages/user/settings",
+    "pages/user/security",
+    "pages/user/personal_playlist",
+    "pages/personalized/index",
+    "pages/personalized/rank"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "音乐",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "音乐",
+        "iconPath": "/static/tabbar/home.png",
+        "selectedIconPath": "/static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/player/player",
+        "text": "播放",
+        "iconPath": "static/tabbar/player.png",
+        "selectedIconPath": "static/tabbar/player-active.png"
+      },
+      {
+        "pagePath": "pages/personalized/index",
+        "text": "个性推荐",
+        "iconPath": "static/tabbar/p.png",
+        "selectedIconPath": "static/tabbar/p-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/tabbar/user.png",
+        "selectedIconPath": "static/tabbar/user-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

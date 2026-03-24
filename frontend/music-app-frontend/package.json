@@ -1,0 +1,48 @@
+{
+  "name": "music-app-frontend",
+  "version": "1.0.0",
+  "description": "音乐播放器前端",
+  "main": "main.js",
+  "scripts": {
+    "dev": "uni -p app",
+    "build": "uni build -p app"
+  },
+  "keywords": [
+    "uni-app",
+    "music",
+    "player"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dcloudio/uni-app": "^2.0.1-34920220630001",
+    "@dcloudio/uni-h5": "^2.0.1-34920220630001",
+    "@dcloudio/uni-helper-json": "^1.0.13",
+    "@dcloudio/uni-i18n": "^2.0.1-34920220630001",
+    "@dcloudio/uni-mp-weixin": "^2.0.1-34920220630001",
+    "@dcloudio/uni-stat": "^2.0.1-34920220630001",
+    "crypto-js": "^4.2.0",
+    "uview-ui": "^2.0.31",
+    "vue": "^2.6.11",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-cli-shared": "^2.0.1-34920220630001",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.1-34920220630001",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.1-34920220630001",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.1-34920220630001",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.1-34920220630001",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.1-34920220630001",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "mini-types": "^0.1.7",
+    "miniprogram-api-typings": "^3.6.0",
+    "sass": "^1.32.13",
+    "sass-loader": "^10.1.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

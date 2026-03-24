@@ -1,0 +1,311 @@
+.search-container {
+		min-height: 100vh;
+		padding: 30rpx;
+		background-color: #f5f5f5;
+		
+		display: flex; 
+		flex-direction: column;
+		height: 100vh;
+		
+		.search-bar {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30rpx;
+			
+			.search-box {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				background-color: #fff;
+				border-radius: 50rpx;
+				padding: 0 30rpx;
+				height: 80rpx;
+				box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+				
+				.u-icon {
+					margin-right: 10rpx;
+				}
+				
+				.search-input {
+					flex: 1;
+					height: 80rpx;
+					line-height: 80rpx;
+					font-size: 28rpx;
+				}
+			}
+			
+			.cancel-btn {
+				font-size: 30rpx;
+				color: #666;
+				margin-left: 20rpx;
+				padding: 10rpx;
+			}
+		}
+		
+		.search-history, .hot-search {
+			margin-bottom: 40rpx;
+			
+			.history-header, .hot-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 20rpx;
+				
+				.title {
+					font-size: 30rpx;
+					color: #333;
+					font-weight: bold;
+				}
+			}
+			
+			.history-list, .hot-list {
+				display: flex;
+				flex-wrap: wrap;
+				
+				.history-item, .hot-item {
+					display: inline-block;
+					background-color: #fff;
+					border-radius: 40rpx;
+					padding: 10rpx 30rpx;
+					margin-right: 20rpx;
+					margin-bottom: 20rpx;
+					font-size: 28rpx;
+					color: #333;
+					box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+				}
+			}
+		}
+		
+		.search-results {
+			flex: 1;
+			overflow: hidden;
+			
+			.no-result {
+				display: flex;
+				justify-content: center;
+				padding: 100rpx 0;
+				color: #999;
+				font-size: 30rpx;
+			}
+			
+			.result-tabs {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				
+				.tab-header {
+					display: flex;
+					background-color: #fff;
+					border-radius: 10rpx 10rpx 0 0;
+					margin-bottom: 20rpx;
+					box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+					flex-shrink: 0;
+					
+					.tab-item {
+						flex: 1;
+						text-align: center;
+						padding: 20rpx 0;
+						font-size: 28rpx;
+						color: #666;
+						
+						&.active {
+							color: #007AFF;
+							font-weight: bold;
+							position: relative;
+							
+							&::after {
+								content: '';
+								position: absolute;
+								bottom: 0;
+								left: 50%;
+								transform: translateX(-50%);
+								width: 40rpx;
+								height: 4rpx;
+								background-color: #007AFF;
+								border-radius: 2rpx;
+							}
+						}
+					}
+				}
+				
+				/* 滚动内容区域 */
+				.tab-content-scroll {
+					flex: 1;
+					height: 0; /* 关键: 配合flex:1使其正确扩展 */
+				}
+				
+				.tab-content {
+					background-color: #fff;
+					border-radius: 10rpx;
+					padding: 10rpx 30rpx;
+					box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+					
+					.song-item {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						padding: 30rpx 0;
+						border-bottom: 1rpx solid #f5f5f5;
+						
+						&:last-child {
+							border-bottom: none;
+						}
+						
+						.song-info {
+							flex: 1;
+							padding-right: 20rpx;
+							overflow: hidden;
+							
+							.song-name {
+								font-size: 28rpx;
+								font-weight: normal;
+								color: #333;
+								margin-bottom: 10rpx;
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								display: block;
+							}
+							
+							.song-artist {
+								font-size: 24rpx;
+								color: #999;
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								display: block;
+							}
+						}
+						
+						.song-actions {
+							display: flex;
+							align-items: center;
+							flex-shrink: 0;
+							
+							.add-icon {
+								font-size: 36rpx;
+								color: #007AFF;
+								margin-right: 15rpx;
+								width: 50rpx;
+								height: 50rpx;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+						}
+					}
+					
+					.artist-item {
+						display: flex;
+						align-items: center;
+						padding: 20rpx 0;
+						border-bottom: 1rpx solid #f5f5f5;
+						
+						&:last-child {
+							border-bottom: none;
+						}
+						
+						.artist-avatar {
+							width: 80rpx;
+							height: 80rpx;
+							border-radius: 50%;
+							margin-right: 20rpx;
+						}
+						
+						.artist-name {
+							font-size: 30rpx;
+							color: #333;
+						}
+					}
+					
+					.album-item {
+						display: flex;
+						align-items: center;
+						padding: 20rpx 0;
+						border-bottom: 1rpx solid #f5f5f5;
+						
+						&:last-child {
+							border-bottom: none;
+						}
+						
+						.album-cover {
+							width: 100rpx;
+							height: 100rpx;
+							border-radius: 10rpx;
+							margin-right: 20rpx;
+						}
+						
+						.album-info {
+							flex: 1;
+							overflow: hidden;
+							
+							.album-name {
+								font-size: 30rpx;
+								color: #333;
+								margin-bottom: 10rpx;
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+							}
+							
+							.album-artist {
+								font-size: 24rpx;
+								color: #999;
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+							}
+						}
+					}
+					
+					/* 歌词列表样式 */
+					.lyrics-item {
+						display: flex;
+						align-items: center;
+						padding: 30rpx;
+						border-bottom: 1rpx solid #eee;
+					}
+					
+					.lyrics-info {
+						flex: 1;
+						padding-right: 20rpx;
+					}
+					
+					.lyrics-content {
+						font-size: 28rpx;
+						color: #333;
+						margin-bottom: 10rpx;
+						display: -webkit-box;
+						-webkit-line-clamp: 2;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+					
+					.lyrics-song-info {
+						display: flex;
+						align-items: center;
+					}
+					
+					.lyrics-song-name {
+						font-size: 24rpx;
+						color: #666;
+					}
+					
+					.lyrics-song-artist {
+						font-size: 24rpx;
+						color: #999;
+						margin-left: 10rpx;
+					}
+				}
+				
+				/* 加载状态提示 */
+				.loading-status {
+					padding: 20rpx 0;
+					text-align: center;
+					color: #888;
+					font-size: 26rpx;
+				}
+			}
+		}
+	}

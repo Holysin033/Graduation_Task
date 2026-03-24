@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 引入 uView 主题文件 */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.container {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  position: relative;
+}
+.container .nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #8e71c7, #61a0e4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.container .nav-bar .status-bar {
+  height: 25px;
+}
+.container .nav-bar .nav-content {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 30rpx;
+}
+.container .nav-bar .nav-content .back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.container .nav-bar .nav-content .back-btn .iconfont {
+  font-size: 36rpx;
+  color: #ffffff;
+}
+.container .nav-bar .nav-content .title {
+  flex: 1;
+  text-align: center;
+  font-size: 34rpx;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+.container .personalized-entry {
+  margin: calc(25px + 170rpx) 30rpx 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+.container .personalized-entry .entry-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 12rpx;
+  margin-right: 20rpx;
+  background: linear-gradient(135deg, #8e71c7, #61a0e4);
+}
+.container .personalized-entry .entry-content {
+  flex: 1;
+}
+.container .personalized-entry .entry-content .entry-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  display: block;
+}
+.container .personalized-entry .entry-content .entry-desc {
+  font-size: 26rpx;
+  color: #999;
+  display: block;
+}
+.container .personalized-entry .icon-right {
+  font-size: 32rpx;
+  color: #999;
+}
+.container .favorites-list {
+  height: calc(100vh - 25px - 280rpx);
+  margin-top: 20rpx;
+}
+.container .favorites-list .list-content {
+  padding: 20rpx 30rpx;
+}
+.container .favorites-list .list-header {
+  padding: 20rpx 10rpx 30rpx;
+}
+.container .favorites-list .list-header .total-count {
+  font-size: 28rpx;
+  color: #888;
+  font-weight: 500;
+}
+.container .favorites-list .playlist-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+.container .favorites-list .playlist-item:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  opacity: 0.9;
+}
+.container .favorites-list .playlist-item .cover {
+  width: 120rpx;
+  height: 120rpx;
+  flex-shrink: 0;
+  /* 防止图片被压缩 */
+  border-radius: 12rpx;
+  margin-right: 24rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+.container .favorites-list .playlist-item .info {
+  flex: 1;
+  width: 0;
+  /* 关键：确保flex子元素宽度计算正确，允许text-overflow生效 */
+  min-width: 0;
+  /* 允许内容缩小到比内容本身更窄 */
+  overflow: hidden;
+  /* 确保溢出内容被隐藏 */
+}
+.container .favorites-list .playlist-item .info .name {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+  line-height: 1.3;
+  max-width: 100%;
+}
+.container .favorites-list .playlist-item .info .text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .favorites-list .playlist-item .info .count {
+  font-size: 24rpx;
+  color: #999;
+}
+.container .favorites-list .playlist-item .actions {
+  padding: 10rpx;
+  margin-left: 16rpx;
+  flex-shrink: 0;
+  /* 防止操作区域被挤压 */
+}
+.container .favorites-list .playlist-item .actions .icon-heart-filled {
+  font-size: 40rpx;
+  color: #ff4d6a;
+  transition: all 0.3s;
+}
+.container .favorites-list .playlist-item .actions .icon-heart-filled:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.container .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60rpx 0;
+}
+.container .empty-state .empty-image {
+  width: 240rpx;
+  height: 240rpx;
+  margin-bottom: 40rpx;
+}
+.container .empty-state .empty-text {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+}
+.container .empty-state .empty-tips {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 40rpx;
+}
+.container .empty-state .empty-action {
+  margin-top: 20rpx;
+}
+.container .empty-state .empty-action .try-btn {
+  padding: 16rpx 40rpx;
+  background: linear-gradient(135deg, #8e71c7, #61a0e4);
+  color: white;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  border: none;
+}

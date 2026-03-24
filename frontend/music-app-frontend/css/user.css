@@ -1,0 +1,267 @@
+.container {
+  min-height: 80vh;
+  background-color: #f5f5f5;
+  overflow-y: hidden;
+}
+.container .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.container .user-info .avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-right: 30rpx;
+}
+.container .user-info .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.container .user-info .info .nickname {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  margin-right: 30rpx;
+}
+.container .user-info .info .username {
+  font-size: 28rpx;
+  color: #999;
+}
+.container .user-info .login-btn {
+  padding: 10rpx 30rpx;
+  background-color: #007AFF;
+  color: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+.container .user-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+}
+.container .user-stats .stat-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  border-right: 1px solid #eee;
+}
+.container .user-stats .stat-item:last-child {
+  border-right: none;
+}
+.container .user-stats .stat-item .count {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.container .user-stats .stat-item .label {
+  font-size: 24rpx;
+  color: #999;
+}
+.container .sync-status {
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .sync-status .status-text {
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .sync-status .status-text::before {
+  content: "\e912";
+  font-family: "iconfont";
+  color: #1ab394;
+  margin-right: 10rpx;
+  font-size: 32rpx;
+}
+.container .sync-status .sync-now {
+  font-size: 24rpx;
+  color: #007AFF;
+  padding: 6rpx 16rpx;
+  border: 1px solid #007AFF;
+  border-radius: 30rpx;
+}
+.container .sync-status .sync-now:active {
+  background-color: rgba(0, 122, 255, 0.1);
+}
+.container .menu-list {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.container .menu-list .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.container .menu-list .menu-item:last-child {
+  border-bottom: none;
+}
+.container .menu-list .menu-item .icon {
+  font-size: 40rpx;
+  color: #007AFF;
+  margin-right: 20rpx;
+}
+.container .menu-list .menu-item .icon.icon-sync {
+  color: #1ab394;
+}
+.container .menu-list .menu-item .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 30rpx;
+  color: #333;
+}
+.container .menu-list .menu-item .arrow {
+  font-size: 30rpx;
+  color: #999;
+}
+.container .logout-section {
+  margin: 40rpx;
+}
+
+.sync-popup {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  width: 560rpx;
+  -webkit-box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
+}
+.sync-popup .sync-popup-title {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.sync-popup .sync-info {
+  margin-bottom: 30rpx;
+}
+.sync-popup .sync-info .sync-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-label {
+  width: 220rpx;
+  color: #666;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #333;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value.status-success {
+  color: #1ab394;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value.status-warning {
+  color: #f8ac59;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value.status-error {
+  color: #ed5565;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value.status-syncing {
+  color: #1c84c6;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value.status-none {
+  color: #999;
+}
+.sync-popup .sync-info .sync-info-item .sync-info-value.error {
+  color: #ed5565;
+}
+.sync-popup .sync-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 30rpx;
+  padding: 20rpx 0;
+  background-color: #f9f9f9;
+  border-radius: 10rpx;
+}
+.sync-popup .sync-stats .sync-stat-item {
+  text-align: center;
+}
+.sync-popup .sync-stats .sync-stat-item .sync-stat-count {
+  display: block;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.sync-popup .sync-stats .sync-stat-item .sync-stat-label {
+  font-size: 24rpx;
+  color: #999;
+}
+.sync-popup .sync-actions {
+  margin-bottom: 30rpx;
+}
+.sync-popup .sync-actions .sync-button {
+  background-color: #007AFF;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  width: 100%;
+  border: none;
+}
+.sync-popup .sync-actions .sync-button:active {
+  background-color: #0062cc;
+}
+.sync-popup .sync-actions .sync-button[disabled] {
+  background-color: #ccc;
+  opacity: 0.8;
+}
+.sync-popup .sync-close {
+  display: block;
+  text-align: center;
+  color: #999;
+  font-size: 28rpx;
+  padding: 10rpx;
+}
+.sync-popup .sync-close:active {
+  color: #666;
+}/*# sourceMappingURL=user.css.map */

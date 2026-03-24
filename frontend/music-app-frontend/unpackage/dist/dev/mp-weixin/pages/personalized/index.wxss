@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 引入 uView 主题文件 */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.personalized-container {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+.personalized-container .login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+  height: 100vh;
+  /* 游客可用功能区样式 */
+}
+.personalized-container .login-prompt image {
+  width: 300rpx;
+  height: 300rpx;
+  margin-bottom: 40rpx;
+}
+.personalized-container .login-prompt text {
+  font-size: 32rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+}
+.personalized-container .login-prompt .login-btn {
+  width: 80%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #1296db;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  border: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 80rpx;
+}
+.personalized-container .login-prompt .guest-features {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 60rpx;
+}
+.personalized-container .login-prompt .guest-features .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.personalized-container .login-prompt .guest-features .feature-item .feature-icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #1296db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.personalized-container .login-prompt .guest-features .feature-item .feature-name {
+  font-size: 28rpx;
+  color: #333;
+}
+.personalized-container .recommend-content {
+  padding: 40rpx;
+  /* 功能入口样式 */
+}
+.personalized-container .recommend-content .features-section {
+  display: flex;
+  background-color: #fff;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+.personalized-container .recommend-content .features-section .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.personalized-container .recommend-content .features-section .feature-item .feature-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #1296db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+.personalized-container .recommend-content .features-section .feature-item .feature-name {
+  font-size: 24rpx;
+  color: #333;
+}
+.personalized-container .recommend-content .music-player {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+.personalized-container .recommend-content .music-player .cover-image {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+.personalized-container .recommend-content .music-player .song-info {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+.personalized-container .recommend-content .music-player .song-info .song-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  display: block;
+}
+.personalized-container .recommend-content .music-player .song-info .artist-name {
+  font-size: 28rpx;
+  color: #666;
+}
+.personalized-container .recommend-content .music-player .player-controls .action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60rpx;
+  margin-bottom: 40rpx;
+}
+.personalized-container .recommend-content .music-player .player-controls .action-buttons button {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 0;
+  background: none;
+  border: none;
+  margin: 0;
+  line-height: 1;
+}
+.personalized-container .recommend-content .music-player .player-controls .action-buttons button::after {
+  border: none;
+}
+.personalized-container .recommend-content .music-player .player-controls .action-buttons button image {
+  width: 100%;
+  height: 100%;
+}
+.personalized-container .recommend-content .music-player .player-controls .next-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40rpx;
+}
+.personalized-container .recommend-content .music-player .player-controls .next-buttons button {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #1296db;
+  color: #fff;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  border: none;
+  text-align: center;
+}
+.personalized-container .recommend-content .music-player .player-controls .next-buttons button::after {
+  border: none;
+}

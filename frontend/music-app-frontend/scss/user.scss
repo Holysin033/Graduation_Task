@@ -1,0 +1,277 @@
+.container {
+	min-height: 80vh;
+	background-color: #f5f5f5;
+	overflow-y: hidden;
+	.user-info {
+		display: flex;
+		align-items: center;
+		padding: 40rpx;
+		background-color: #fff;
+		margin-bottom: 20rpx;
+		
+		.avatar {
+			width: 120rpx;
+			height: 120rpx;
+			border-radius: 60rpx;
+			margin-right: 30rpx;
+		}
+		
+		.info {
+			flex: 1;
+			
+			.nickname {
+				font-size: 36rpx;
+				color: #333;
+				font-weight: bold;
+				margin-bottom: 10rpx;
+				margin-right: 30rpx;
+			}
+			
+			.username {
+				font-size: 28rpx;
+				color: #999;
+			}
+		}
+		
+		.login-btn {
+			padding: 10rpx 30rpx;
+			background-color: #007AFF;
+			color: #fff;
+			border-radius: 30rpx;
+			font-size: 28rpx;
+		}
+	}
+	
+	.user-stats {
+		display: flex;
+		background-color: #fff;
+		padding: 30rpx 0;
+		margin-bottom: 20rpx;
+		
+		.stat-item {
+			flex: 1;
+			text-align: center;
+			border-right: 1px solid #eee;
+			
+			&:last-child {
+				border-right: none;
+			}
+			
+			.count {
+				font-size: 36rpx;
+				color: #333;
+				font-weight: bold;
+				margin-bottom: 10rpx;
+			}
+			
+			.label {
+				font-size: 24rpx;
+				color: #999;
+			}
+		}
+	}
+	
+	// 同步状态显示样式
+	.sync-status {
+		background-color: #fff;
+		padding: 20rpx 30rpx;
+		margin-bottom: 20rpx;
+		font-size: 26rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		.status-text {
+			color: #666;
+			display: flex;
+			align-items: center;
+			
+			&::before {
+				content: '\e912'; // 使用同步图标的unicode
+				font-family: "iconfont";
+				color: #1ab394;
+				margin-right: 10rpx;
+				font-size: 32rpx;
+			}
+		}
+		
+		.sync-now {
+			font-size: 24rpx;
+			color: #007AFF;
+			padding: 6rpx 16rpx;
+			border: 1px solid #007AFF;
+			border-radius: 30rpx;
+			
+			&:active {
+				background-color: rgba(0, 122, 255, 0.1);
+			}
+		}
+	}
+	
+	.menu-list {
+		background-color: #fff;
+		margin-bottom: 20rpx;
+		
+		.menu-item {
+			display: flex;
+			align-items: center;
+			padding: 30rpx;
+			border-bottom: 1px solid #eee;
+			
+			&:last-child {
+				border-bottom: none;
+			}
+			
+			.icon {
+				font-size: 40rpx;
+				color: #007AFF;
+				margin-right: 20rpx;
+
+				&.icon-sync {
+					color: #1ab394; // 为同步图标设置特殊颜色
+				}
+			}
+			
+			.title {
+				flex: 1;
+				font-size: 30rpx;
+				color: #333;
+			}
+			
+			.arrow {
+				font-size: 30rpx;
+				color: #999;
+			}
+		}
+	}
+	
+	.logout-section {
+		margin: 40rpx;
+	}
+}
+
+// 同步详情弹窗样式
+.sync-popup {
+	background-color: #fff;
+	border-radius: 20rpx;
+	padding: 40rpx;
+	width: 560rpx;
+	box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
+	
+	.sync-popup-title {
+		font-size: 36rpx;
+		color: #333;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 30rpx;
+		padding-bottom: 20rpx;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	
+	.sync-info {
+		margin-bottom: 30rpx;
+		
+		.sync-info-item {
+			display: flex;
+			margin-bottom: 20rpx;
+			font-size: 28rpx;
+			align-items: center;
+			
+			.sync-info-label {
+				width: 220rpx;
+				color: #666;
+			}
+			
+			.sync-info-value {
+				flex: 1;
+				color: #333;
+				
+				&.status-success {
+					color: #1ab394;
+				}
+				
+				&.status-warning {
+					color: #f8ac59;
+				}
+				
+				&.status-error {
+					color: #ed5565;
+				}
+				
+				&.status-syncing {
+					color: #1c84c6;
+				}
+				
+				&.status-none {
+					color: #999;
+				}
+				
+				&.error {
+					color: #ed5565;
+				}
+			}
+		}
+	}
+	
+	.sync-stats {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 30rpx;
+		padding: 20rpx 0;
+		background-color: #f9f9f9;
+		border-radius: 10rpx;
+		
+		.sync-stat-item {
+			text-align: center;
+			
+			.sync-stat-count {
+				display: block;
+				font-size: 32rpx;
+				color: #333;
+				font-weight: bold;
+				margin-bottom: 10rpx;
+			}
+			
+			.sync-stat-label {
+				font-size: 24rpx;
+				color: #999;
+			}
+		}
+	}
+	
+	.sync-actions {
+		margin-bottom: 30rpx;
+		
+		.sync-button {
+			background-color: #007AFF;
+			color: #fff;
+			font-size: 28rpx;
+			border-radius: 40rpx;
+			padding: 20rpx 0;
+			text-align: center;
+			width: 100%;
+			border: none;
+			
+			&:active {
+				background-color: darken(#007AFF, 10%);
+			}
+			
+			&[disabled] {
+				background-color: #ccc;
+				opacity: 0.8;
+			}
+		}
+	}
+	
+	.sync-close {
+		display: block;
+		text-align: center;
+		color: #999;
+		font-size: 28rpx;
+		padding: 10rpx;
+		
+		&:active {
+			color: #666;
+		}
+	}
+}
